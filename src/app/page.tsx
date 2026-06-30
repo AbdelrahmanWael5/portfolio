@@ -137,9 +137,8 @@ export default function Home() {
                 </div>
 
                 <p className="leading-8 text-gray-300">
-                  Passionate AI Engineer specializing in Machine Learning, Computer Vision, Natural Language Processing,
-                  Generative AI, Data Science, and Internet of Things. Experienced 
-                  in developing intelligent systems and solving real-world problems through scalable AI solutions.
+                  Passionate Fresh Graduate AI Engineer specializing in Machine Learning, Computer Vision, Natural Language Processing,
+                  Generative AI, and Data Science. Experienced in developing intelligent systems and solving real-world problems through scalable AI solutions.
                 </p>
 
               </div>
@@ -199,7 +198,7 @@ export default function Home() {
               />
             </div>
 
-            {/* Photo */}
+            {/* Photo 
             <div className="relative h-72 w-72 overflow-hidden rounded-full border-2 border-purple-500/50 shadow-[0_0_40px_rgba(168,85,247,0.35)]">
 
               <Image
@@ -211,6 +210,7 @@ export default function Home() {
               />
 
             </div>
+            */}
 
           </div>
 
@@ -394,74 +394,6 @@ export default function Home() {
 
               <div>
                 <h3 className="text-lg font-semibold">
-                  Python Programming Fundamentals
-                </h3>
-
-                <p className="mt-1 text-purple-300">
-                  Mahara-Tech
-                </p>
-
-                <p className="mt-1 text-sm text-gray-500">
-                  2025
-                </p>
-
-                <a
-                  href="Python_Course_MaharaTech.pdf"
-                  className="mt-3 inline-block text-sm text-purple-400 hover:text-purple-300"
-                >
-                  View Certificate →
-                </a>
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* Certificate 2 */}
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:border-purple-500/40">
-
-            <div className="flex items-start gap-4">
-
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/20">
-                <HiOutlineAcademicCap className="text-xl text-purple-300" />
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold">
-                  Python for Data Science, AI & Development
-                </h3>
-
-                <p className="mt-1 text-purple-300">
-                  IBM / Coursera
-                </p>
-
-                <p className="mt-1 text-sm text-gray-500">
-                  2024
-                </p>
-
-                <a
-                  href="#"
-                  className="mt-3 inline-block text-sm text-purple-400 hover:text-purple-300"
-                >
-                  View Certificate →
-                </a>
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* Certificate 3 */}
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:border-purple-500/40">
-
-            <div className="flex items-start gap-4">
-
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/20">
-                <HiOutlineAcademicCap className="text-xl text-purple-300" />
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold">
                   Introduction to Machine Learning
                 </h3>
 
@@ -474,10 +406,10 @@ export default function Home() {
                 </p>
 
                 <a
-                  href="ML_AITB.pdf"
+                  href="https://aitbeg.com/verify-certification?cn=DT-AI-ML-230722074047"
                   className="mt-3 inline-block text-sm text-purple-400 hover:text-purple-300"
                 >
-                  View Certificate →
+                  View Credential →
                 </a>
               </div>
 
@@ -485,7 +417,7 @@ export default function Home() {
 
           </div>
 
-          {/* Certificate 4 */}
+          {/* Certificate 2 */}
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:border-purple-500/40">
 
             <div className="flex items-start gap-4">
@@ -508,10 +440,10 @@ export default function Home() {
                 </p>
 
                 <a
-                  href="Coursera1_Andrew.pdf"
+                  href="https://coursera.org/verify/N3ZU3L9EBTEZ"
                   className="mt-3 inline-block text-sm text-purple-400 hover:text-purple-300"
                 >
-                  View Certificate →
+                  View Credential →
                 </a>
               </div>
 
@@ -519,7 +451,7 @@ export default function Home() {
 
           </div>
 
-          {/* Certificate 5 */}
+          {/* Certificate 3 */}
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:border-purple-500/40">
 
             <div className="flex items-start gap-4">
@@ -542,10 +474,10 @@ export default function Home() {
                 </p>
 
                 <a
-                  href="Coursera2_Andrew.pdf"
+                  href="https://coursera.org/verify/JA0AZRSIGROR"
                   className="mt-3 inline-block text-sm text-purple-400 hover:text-purple-300"
                 >
-                  View Certificate →
+                  View Credential →
                 </a>
               </div>
 
@@ -553,7 +485,7 @@ export default function Home() {
 
           </div>
 
-          {/* Certificate 6 */}
+          {/* Certificate 4 */}
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:border-purple-500/40">
 
             <div className="flex items-start gap-4">
@@ -576,7 +508,7 @@ export default function Home() {
                 </p>
 
                 <a
-                  href="ML_DEPI.pdf"
+                  href="##"
                   className="mt-3 inline-block text-sm text-purple-400 hover:text-purple-300"
                 >
                   View Credential →
@@ -613,9 +545,12 @@ export default function Home() {
               Diffusion-based virtual try-on system for realistic garment transfer.
             </p>
 
-            <button className="rounded-lg border border-purple-500 px-4 py-2">
+            <Link
+              href="/projects/hybrid-vton"
+              className="inline-block rounded-lg border border-purple-500 px-4 py-2 hover:bg-purple-500/10 transition"
+            >
               Project Details
-            </button>
+            </Link>
           </div>
 
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
@@ -638,16 +573,21 @@ export default function Home() {
 
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
             <h3 className="mb-3 text-xl font-semibold">
-              Sketch-to-Image
+              Sketch-to-Shoe
             </h3>
 
             <p className="mb-5 text-gray-300">
               Generate realistic footwear images from sketches.
             </p>
 
-            <button className="rounded-lg border border-purple-500 px-4 py-2">
-              Project Details
-            </button>
+            <Link href="/projects/sketch-to-shoe">
+
+              <button className="rounded-lg border border-purple-500 px-4 py-2 transition hover:bg-purple-500/10">
+                Project Details
+              </button>
+
+            </Link>
+
           </div>
 
         </div>

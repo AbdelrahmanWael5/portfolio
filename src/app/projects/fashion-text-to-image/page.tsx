@@ -67,11 +67,344 @@ export default function FashionTextToImagePage() {
 
         </section>
 
-        {/* Featured Results */}
+        {/* Project Overview */}
+        <section className="mx-auto max-w-7xl px-8 pb-20">
+
+            <h2 className="mb-8 text-5xl font-bold">
+                Project Overview
+            </h2>
+
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+
+                <p className="leading-9 text-gray-300">
+                    This project investigates domain-specific text-to-image generation by
+                    fine-tuning <span className="font-medium text-white">Stable Diffusion XL (SDXL) </span> 
+                    on a custom fashion dataset. Rather than relying on generic image-caption
+                    pairs, a dedicated dataset was constructed from the VITON-HD clothing
+                    collection using automatically generated captions produced by
+                    <span className="font-medium text-white"> Qwen2.5-VL</span>.
+                </p>
+
+                <p className="mt-6 leading-9 text-gray-300">
+                    To improve caption consistency and training quality, a preprocessing
+                    pipeline was developed to clean, normalize, and standardize the generated
+                    descriptions before fine-tuning SDXL. This enables the model to better
+                    understand fashion-specific attributes such as garment category, color,
+                    material, sleeve length, fit, and patterns.
+                </p>
+
+                <div className="mt-10 grid gap-6 md:grid-cols-3">
+
+                    <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
+
+                        <h3 className="text-lg font-semibold">
+                            Objective
+                        </h3>
+
+                        <p className="mt-3 leading-7 text-gray-400">
+                            Fine-tune Stable Diffusion XL for fashion-specific
+                            text-to-image generation.
+                        </p>
+
+                    </div>
+
+                    <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
+
+                        <h3 className="text-lg font-semibold">
+                            Contribution
+                        </h3>
+
+                        <p className="mt-3 leading-7 text-gray-400">
+                            Built an automated caption generation and preprocessing
+                            pipeline tailored for fashion data.
+                        </p>
+
+                    </div>
+
+                    <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
+
+                        <h3 className="text-lg font-semibold">
+                            Outcome
+                        </h3>
+
+                        <p className="mt-3 leading-7 text-gray-400">
+                            Improved generation of detailed apparel images from
+                            natural language descriptions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        {/* Motivation */}
+        <section className="mx-auto max-w-7xl px-8 pb-24">
+
+            <h2 className="mb-8 text-5xl font-bold">
+                Motivation
+            </h2>
+
+            <div className="grid gap-6 md:grid-cols-2">
+
+                <div className="rounded-3xl border border-white/10 bg-white/5 p-7">
+
+                    <h3 className="text-xl font-semibold">
+                        Domain Gap
+                    </h3>
+
+                    <p className="mt-4 leading-8 text-gray-300">
+                        General-purpose text-to-image models often struggle to accurately
+                        capture fine-grained fashion attributes such as garment type,
+                        sleeve length, materials, patterns, and fit.
+                    </p>
+
+                </div>
+
+                <div className="rounded-3xl border border-white/10 bg-white/5 p-7">
+
+                    <h3 className="text-xl font-semibold">
+                        Dataset Quality
+                    </h3>
+
+                    <p className="mt-4 leading-8 text-gray-300">
+                        Existing fashion datasets typically lack high-quality,
+                        standardized captions suitable for training modern
+                        diffusion models.
+                    </p>
+
+                </div>
+
+                <div className="rounded-3xl border border-white/10 bg-white/5 p-7">
+
+                    <h3 className="text-xl font-semibold">
+                        Research Question
+                    </h3>
+
+                    <p className="mt-4 leading-8 text-gray-300">
+                        Can domain-specific caption generation and dataset refinement
+                        improve the ability of Stable Diffusion XL to generate more
+                        realistic and controllable fashion images?
+                    </p>
+
+                </div>
+
+                <div className="rounded-3xl border border-purple-500/20 bg-purple-500/10 p-7">
+
+                    <h3 className="text-xl font-semibold">
+                        Proposed Solution
+                    </h3>
+
+                    <p className="mt-4 leading-8 text-gray-300">
+                        Generate high-quality fashion captions using Qwen2.5-VL,
+                        preprocess them into a unified training format, and fine-tune
+                        Stable Diffusion XL on the resulting dataset.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        {/* Dataset Preparation */}
+        <section className="mx-auto max-w-7xl px-8 pb-24">
+
+            <h2 className="mb-8 text-5xl font-bold">
+                Dataset Preparation
+            </h2>
+
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+
+                <p className="leading-9 text-gray-300">
+                    Rather than directly fine-tuning Stable Diffusion XL on an existing
+                    fashion dataset, a dedicated training dataset was constructed from
+                    the VITON-HD clothing collection. Each garment image was
+                    automatically captioned using <span className="font-medium text-white">Qwen2.5-VL</span>,
+                    followed by a preprocessing pipeline that cleaned, standardized,
+                    and unified the generated captions into a consistent prompt format.
+                    The resulting dataset was then used to fine-tune SDXL for
+                    fashion-specific image generation.
+                </p>
+
+                {/* Dataset Construction Diagram */}
+
+                <div className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-[#111827]">
+
+                    <Image
+                        src="/projects/fashion-text-to-image/dataset-preparation.png"
+                        alt="Dataset Preparation Pipeline"
+                        width={1600}
+                        height={900}
+                        className="w-full h-auto"
+                    />
+
+                </div>
+
+                <p className="mt-5 text-center text-sm italic text-gray-400">
+                    Figure 1. Dataset preparation pipeline used to construct the
+                    fashion-specific image-text dataset for SDXL fine-tuning.
+                </p>
+
+                {/* Dataset Statistics */}
+
+                <div className="mt-12 grid gap-6 md:grid-cols-4">
+
+                    <div className="rounded-2xl border border-white/10 bg-black/20 p-6 text-center">
+
+                        <h3 className="text-4xl font-bold text-purple-400">
+                            13,679
+                        </h3>
+
+                        <p className="mt-3 text-gray-300">
+                            Original Images
+                        </p>
+
+                    </div>
+
+                    <div className="rounded-2xl border border-white/10 bg-black/20 p-6 text-center">
+
+                        <h3 className="text-4xl font-bold text-purple-400">
+                            10,482
+                        </h3>
+
+                        <p className="mt-3 text-gray-300">
+                            Training Samples
+                        </p>
+
+                    </div>
+
+                    <div className="rounded-2xl border border-white/10 bg-black/20 p-6 text-center">
+
+                        <h3 className="text-4xl font-bold text-purple-400">
+                            1,165
+                        </h3>
+
+                        <p className="mt-3 text-gray-300">
+                            Validation Samples
+                        </p>
+
+                    </div>
+
+                    <div className="rounded-2xl border border-white/10 bg-black/20 p-6 text-center">
+
+                        <h3 className="text-4xl font-bold text-purple-400">
+                            2,032
+                        </h3>
+
+                        <p className="mt-3 text-gray-300">
+                            Test Samples
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        
+        {/* SDXL Fine-Tuning Architecture */}
+        <section className="mx-auto max-w-7xl px-8 pb-24">
+
+            <h2 className="mb-10 text-5xl font-bold">
+                SDXL Fine-Tuning Architecture
+            </h2>
+
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+
+                <p className="leading-8 text-gray-300">
+                    This project builds upon the original Stable Diffusion XL (SDXL)
+                    architecture to generate high-quality fashion images from structured
+                    textual descriptions. Rather than training a diffusion model from
+                    scratch, the pretrained SDXL backbone is adapted for the fashion
+                    domain through supervised fine-tuning on a custom captioned dataset.
+                    The objective is to enable the model to accurately translate detailed
+                    clothing descriptions into realistic garment images while preserving
+                    visual fidelity and attribute consistency.
+                </p>
+
+                <p className="mt-6 leading-8 text-gray-300">
+                    During training, only the denoising UNet is fine-tuned while the
+                    VAE and text encoder remain frozen. This significantly reduces the
+                    number of trainable parameters while leveraging the strong prior
+                    knowledge learned by the pretrained SDXL model. The resulting
+                    architecture provides an efficient framework for controllable
+                    fashion image synthesis without requiring full model retraining.
+                </p>
+
+                {/* Architecture Diagram */}
+
+                <div className="mt-10 overflow-hidden rounded-3xl border border-white/10">
+
+                    <Image
+                        src="/projects/fashion-text-to-image/architecture.png"
+                        alt="SDXL Fine-Tuning Architecture"
+                        width={1800}
+                        height={950}
+                        className="w-full"
+                    />
+
+                </div>
+
+                {/* Summary Cards */}
+
+                <div className="mt-10 grid gap-6 md:grid-cols-2">
+
+                    <div className="rounded-2xl bg-white/5 p-6">
+
+                        <h3 className="mb-4 text-xl font-semibold">
+                            Base SDXL Components
+                        </h3>
+
+                        <ul className="space-y-3 text-gray-300">
+
+                            <li>• Pretrained Stable Diffusion XL</li>
+
+                            <li>• Frozen Variational Autoencoder (VAE)</li>
+
+                            <li>• Frozen Dual Text Encoders</li>
+
+                            <li>• DDPM Noise Scheduler</li>
+
+                        </ul>
+
+                    </div>
+
+                    <div className="rounded-2xl border border-purple-500/20 bg-purple-500/10 p-6">
+
+                        <h3 className="mb-4 text-xl font-semibold">
+                            Project Contributions
+                        </h3>
+
+                        <ul className="space-y-3 text-gray-300">
+
+                            <li>• Fine-tuned the SDXL UNet for fashion generation.</li>
+
+                            <li>• Built a custom caption preparation pipeline.</li>
+
+                            <li>• Trained using structured fashion descriptions.</li>
+
+                            <li>• Generated controllable clothing images from text.</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        {/* Results */}
         <section className="mx-auto max-w-7xl px-8 pb-24">
 
             <h2 className="mb-10 text-4xl font-bold">
-                Featured Results
+                Results
             </h2>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -140,184 +473,6 @@ export default function FashionTextToImagePage() {
                     </div>
 
                 </div>
-
-                ))}
-
-            </div>
-
-        </section>
-
-        {/* Overview */}
-        <section className="mx-auto max-w-7xl px-8 py-20">
-
-          <h2 className="mb-10 text-4xl font-bold">
-            Overview
-          </h2>
-
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
-
-            <p className="text-lg leading-9 text-gray-300">
-
-              This project focuses on generating realistic fashion
-              images from natural language prompts by fine-tuning
-              Stable Diffusion XL (SDXL) on a custom fashion
-              image-text dataset.
-
-              <br /><br />
-
-              The dataset was created using clothing images from
-              VITON-HD combined with automatically generated
-              captions produced by Qwen2.5-VL, followed by a
-              caption cleaning and preprocessing pipeline.
-
-            </p>
-
-          </div>
-
-        </section>
-
-        {/* Why I Built It */}
-        <section className="mx-auto max-w-7xl px-8 py-20">
-
-            <h2 className="mb-10 text-4xl font-bold">
-                Why I Built It
-            </h2>
-
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
-
-                <p className="text-lg leading-9 text-gray-300">
-
-                General-purpose text-to-image models often struggle
-                with fashion-specific attributes such as garment type,
-                fit, material, sleeve length, and style.
-
-                <br /><br />
-
-                This project explores whether domain-specific
-                fine-tuning on fashion data can improve image quality
-                and generate more realistic apparel images from
-                natural language descriptions.
-
-                </p>
-
-            </div>
-
-        </section>
-
-        {/* Pipeline */}
-        <section className="mx-auto max-w-7xl px-8 py-20">
-
-            <h2 className="mb-10 text-4xl font-bold">
-                End-to-End Pipeline
-            </h2>
-
-            <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-6">
-
-                {[
-                "VITON-HD Images",
-                "Qwen2.5-VL Captions",
-                "Caption Cleaning",
-                "Dataset Creation",
-                "SDXL Fine-Tuning",
-                "Image Generation",
-                ].map((step, index) => (
-
-                <div
-                    key={index}
-                    className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur"
-                >
-
-                    <div className="mb-4 text-3xl font-bold text-purple-400">
-                    {index + 1}
-                    </div>
-
-                    <p className="text-gray-300">
-                    {step}
-                    </p>
-
-                </div>
-
-                ))}
-
-            </div>
-
-        </section>
-
-        {/* Dataset */}
-        <section className="mx-auto max-w-7xl px-8 py-20">
-
-            <h2 className="mb-10 text-4xl font-bold">
-                Dataset
-            </h2>
-
-            <div className="grid gap-6 md:grid-cols-4">
-
-                <div className="rounded-3xl border border-white/10 bg-white/5 p-8 text-center">
-                <h3 className="text-4xl font-bold text-purple-400">
-                    10,482
-                </h3>
-                <p className="mt-3 text-gray-300">
-                    Training Samples
-                </p>
-                </div>
-
-                <div className="rounded-3xl border border-white/10 bg-white/5 p-8 text-center">
-                <h3 className="text-4xl font-bold text-purple-400">
-                    1,165
-                </h3>
-                <p className="mt-3 text-gray-300">
-                    Validation Samples
-                </p>
-                </div>
-
-                <div className="rounded-3xl border border-white/10 bg-white/5 p-8 text-center">
-                <h3 className="text-4xl font-bold text-purple-400">
-                    2,032
-                </h3>
-                <p className="mt-3 text-gray-300">
-                    Test Samples
-                </p>
-                </div>
-
-                <div className="rounded-3xl border border-white/10 bg-white/5 p-8 text-center">
-                <h3 className="text-4xl font-bold text-purple-400">
-                    VITON-HD
-                </h3>
-                <p className="mt-3 text-gray-300">
-                    Source Dataset
-                </p>
-                </div>
-
-            </div>
-
-        </section>
-
-        {/* Tech Stack */}
-        <section className="mx-auto max-w-7xl px-8 py-20">
-
-            <h2 className="mb-10 text-4xl font-bold">
-                Technologies Used
-            </h2>
-
-            <div className="flex flex-wrap gap-4">
-
-                {[
-                "Python",
-                "PyTorch",
-                "Transformers",
-                "Diffusers",
-                "Qwen2.5-VL",
-                "Stable Diffusion XL",
-                "Streamlit",
-                "Hugging Face",
-                ].map((tech) => (
-
-                <span
-                    key={tech}
-                    className="rounded-full border border-purple-500/30 bg-purple-500/10 px-5 py-3 text-purple-300"
-                >
-                    {tech}
-                </span>
 
                 ))}
 
