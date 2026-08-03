@@ -108,7 +108,7 @@ export default function Home() {
         className="relative z-10 mx-auto max-w-7xl px-8 pt-36 pb-20"
       >
 
-        <div className="grid items-start gap-12 lg:grid-cols-[1.4fr_0.8fr]">
+        <div className="grid items-start gap-12 lg:grid-cols-[1.8fr_0.6fr]">
 
           {/* Left Side */}
           <div>
@@ -222,7 +222,7 @@ export default function Home() {
           <div className="grid gap-4 md:grid-cols-3">
 
             <a
-              href="/Abdelrahman_Wael_Resume.pdf"
+              href="/Abdelrahman_Wael_CV.pdf"
               download
               className="flex items-center justify-center gap-2 rounded-xl border border-purple-500 px-6 py-4 transition hover:bg-purple-500/10"
             >
@@ -525,72 +525,231 @@ export default function Home() {
 
       {/* ---------------------------------- Projects ---------------------------------- */}
 
-
       <section
         id="projects"
         className="relative z-10 mx-auto max-w-6xl px-8 py-16"
       >
-        <h2 className="mb-10 text-5xl font-bold">
-          Featured Projects
+
+        <h2 className="mb-14 text-5xl font-bold">
+          Projects
         </h2>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        {/* ================= Graduation Project ================= */}
 
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-            <h3 className="mb-3 text-xl font-semibold">
+        <div className="mb-16">
+
+          <div className="mb-6 flex items-center gap-4">
+
+            <div className="h-px flex-1 bg-white/10" />
+
+            <span className="rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-1 text-sm font-medium text-purple-300">
+              🎓 Graduation Project
+            </span>
+
+            <div className="h-px flex-1 bg-white/10" />
+
+          </div>
+
+          <div className="rounded-3xl border border-purple-500/20 bg-white/5 p-8 backdrop-blur">
+
+            <h3 className="mb-4 text-3xl font-bold">
               HybridVTON
             </h3>
 
-            <p className="mb-5 text-gray-300">
-              Diffusion-based virtual try-on system for realistic garment transfer.
+            <p className="mb-6 max-w-3xl text-lg leading-8 text-gray-300">
+              A hybrid diffusion-based virtual try-on framework that combines
+              explicit garment alignment with implicit image generation for
+              realistic and identity-preserving try-on.
             </p>
 
             <Link
               href="/projects/hybrid-vton"
-              className="inline-block rounded-lg border border-purple-500 px-4 py-2 hover:bg-purple-500/10 transition"
+              className="inline-block rounded-xl border border-purple-500 px-5 py-3 transition hover:bg-purple-500/10"
             >
               Project Details
-            </Link>
-          </div>
-
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-            <h3 className="mb-3 text-xl font-semibold">
-              Fashion Text-to-Image
-            </h3>
-
-            <p className="mb-5 text-gray-300">
-              Fine-tuned SDXL model for fashion image generation.
-            </p>
-
-            <Link
-              href="/projects/fashion-text-to-image"
-              className="inline-block rounded-lg border border-purple-500 px-4 py-2 hover:bg-purple-500/10 transition"
-            >
-              Project Details
-            </Link>
-
-          </div>
-
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-            <h3 className="mb-3 text-xl font-semibold">
-              Sketch-to-Shoe
-            </h3>
-
-            <p className="mb-5 text-gray-300">
-              Generate realistic footwear images from sketches.
-            </p>
-
-            <Link href="/projects/sketch-to-shoe">
-
-              <button className="rounded-lg border border-purple-500 px-4 py-2 transition hover:bg-purple-500/10">
-                Project Details
-              </button>
-
             </Link>
 
           </div>
 
         </div>
+
+        {/* ================= Generative AI ================= */}
+
+        <div className="mb-16">
+
+          <div className="mb-8 flex items-center gap-4">
+
+            <div className="h-px flex-1 bg-white/10" />
+
+            <span className="rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-1 text-sm font-medium text-blue-300">
+              🤖 Generative AI
+            </span>
+
+            <div className="h-px flex-1 bg-white/10" />
+
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+
+            {/* AI Fashion Designer */}
+
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+
+              <h3 className="mb-3 text-2xl font-semibold">
+                AI Fashion Designer
+              </h3>
+
+              <p className="mb-6 leading-8 text-gray-300">
+                A conversational multi-agent system that transforms natural
+                language into fashion images using LLMs and Fine-Tuned Stable
+                Diffusion XL.
+              </p>
+
+              <Link
+                href="/projects/fashion-text-to-image"
+                className="inline-block rounded-lg border border-purple-500 px-4 py-2 transition hover:bg-purple-500/10"
+              >
+                Project Details
+              </Link>
+
+            </div>
+
+            {/* Sketch-to-Shoe */}
+
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+
+              <h3 className="mb-3 text-2xl font-semibold">
+                Sketch-to-Shoe
+              </h3>
+
+              <p className="mb-6 leading-8 text-gray-300">
+                A research-driven Diffusion Transformer framework that
+                investigates sketch-guided conditioning strategies for
+                realistic footwear generation.
+              </p>
+
+              <Link
+                href="/projects/sketch-to-shoe"
+                className="inline-block rounded-lg border border-purple-500 px-4 py-2 transition hover:bg-purple-500/10"
+              >
+                Project Details
+              </Link>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* ================= Machine Learning ================= */}
+
+        <div>
+
+          <div className="mb-8 flex items-center gap-4">
+
+            <div className="h-px flex-1 bg-white/10" />
+
+            <span className="rounded-full border border-green-500/30 bg-green-500/10 px-4 py-1 text-sm font-medium text-green-300">
+              📊 Machine Learning
+            </span>
+
+            <div className="h-px flex-1 bg-white/10" />
+
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+            {/* ML1 */}
+
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+
+              <h3 className="text-xl font-semibold">
+                Credit Card Fraud Detection
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-gray-300">
+                Machine learning models for detecting fraudulent credit card
+                transactions using highly imbalanced financial data.
+              </p>
+
+              <a
+                href="https://github.com/AbdelrahmanWael5/Credit-Card-Fraud-Detection"
+                target="_blank"
+                className="mt-6 inline-block text-purple-400 transition hover:text-purple-300"
+              >
+                View Repository →
+              </a>
+
+            </div>
+
+            {/* ML2 */}
+
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+
+              <h3 className="text-xl font-semibold">
+                Heart Disease Prediction
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-gray-300">
+                Built a machine learning model to predict heart disease risk from patient clinical data using data preprocessing, classification algorithms, and performance evaluation.
+              </p>
+
+              <a
+                href="https://github.com/AbdelrahmanWael5/Heart-Disease-Prediction"
+                target="_blank"
+                className="mt-6 inline-block text-purple-400 transition hover:text-purple-300"
+              >
+                View Repository →
+              </a>
+
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+
+              <h3 className="text-xl font-semibold">
+                Student Score Prediction
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-gray-300">
+                Developed a regression model to predict student academic scores from educational and demographic features using feature engineering and regression techniques.
+              </p>
+
+              <a
+                href="https://github.com/AbdelrahmanWael5/Student-Score-Prediction"
+                target="_blank"
+                className="mt-6 inline-block text-purple-400 transition hover:text-purple-300"
+              >
+                View Repository →
+              </a>
+
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+
+              <h3 className="text-xl font-semibold">
+                Success Prediction
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-gray-300">
+                Developed a machine learning classification model to predict student success using data preprocessing, feature engineering, and model evaluation techniques.
+              </p>
+
+              <a
+                href="https://github.com/AbdelrahmanWael5/Success-Prediction"
+                target="_blank"
+                className="mt-6 inline-block text-purple-400 transition hover:text-purple-300"
+              >
+                View Repository →
+              </a>
+
+            </div>
+
+            {/* Add the remaining ML projects here */}
+
+          </div>
+
+        </div>
+
       </section>
 
       

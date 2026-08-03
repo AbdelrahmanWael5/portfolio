@@ -63,7 +63,7 @@ export default function SketchToShoe() {
             <div className="mt-10 flex flex-wrap gap-4">
 
                 <a
-                href="YOUR_GITHUB_REPOSITORY"
+                href="https://github.com/AbdelrahmanWael5/sketch-to-shoe"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-xl border border-purple-500 px-6 py-3 transition hover:bg-purple-500/10"
