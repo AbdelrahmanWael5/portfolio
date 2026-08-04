@@ -659,7 +659,7 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
-            {/* ML1 */}
+            {/* ML1 
 
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
 
@@ -681,6 +681,8 @@ export default function Home() {
               </a>
 
             </div>
+            
+            */}
 
             {/* ML2 */}
 
