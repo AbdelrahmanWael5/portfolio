@@ -282,7 +282,7 @@ export default function Home() {
             
             <h3 className="mb-3 text-3xl font-bold text-white">HybridVTON</h3>
             <p className="mb-6 max-w-4xl leading-7 text-gray-300">
-              A diffusion-based virtual try-on framework that combines explicit geometric guidance with implicit garment–person feature interaction to achieve accurate garment alignment and high-fidelity synthesis. The framework integrates multi-level garment conditioning and identity-preserving mechanisms to generate realistic try-on results for both upper- and lower-body garments.
+              An advanced diffusion-based virtual try-on framework designed to achieve accurate garment alignment and high-fidelity synthesis. The project focuses on generating highly realistic, artifact-free try-on results for both upper- and lower-body garments while preserving the wearer's identity and original garment details.
             </p>
 
             <div className="mb-6 rounded-2xl border border-white/5 bg-black/30 p-5">
@@ -297,7 +297,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400">•</span>
-                  <span>Successfully combined explicit pose-guided warping with implicit diffusion generation for artifact-free clothing alignment and preservation of intricate garment textures.</span>
+                  <span>Delivered exceptional visual fidelity, ensuring robust artifact-free clothing alignment and the meticulous preservation of complex garment textures.</span>
                 </li>
               </ul>
             </div>
