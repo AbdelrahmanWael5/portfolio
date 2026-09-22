@@ -288,7 +288,7 @@ export default function Home() {
             <div className="mb-6 rounded-2xl border border-white/5 bg-black/30 p-5">
               <div className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-purple-300">
                 <FaChartLine />
-                Quantitative Performance & Benchmarks (VITON-HD Dataset)
+                Quantitative Performance
               </div>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li className="flex items-start gap-2">

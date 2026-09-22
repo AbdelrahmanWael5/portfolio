@@ -43,7 +43,7 @@ export default function HybridVTONPage() {
                     </h2>
 
                     <p className="max-w-5xl text-lg leading-9 text-gray-300">
-                        HybridVTON is an advanced diffusion-based virtual try-on framework that combines explicit geometric guidance with implicit attention-based alignment learning. By transforming explicit alignment into an occlusion-aware binary spatial prior, the framework achieves state-of-the-art garment-body alignment using Stable Diffusion XL while eliminating the appearance distortions typically caused by direct garment warping.
+                        HybridVTON is an advanced generative virtual try-on framework designed to achieve state-of-the-art garment-body alignment. The system focuses on producing highly realistic, high-fidelity try-on results while completely eliminating the visual distortions typical of traditional methods.
                     </p>
 
                     {/* Buttons */}
